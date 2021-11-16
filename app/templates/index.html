@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf %}
+<!-- Styles block -->
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock %}
+<!-- Content block -->
+{% block content %}
+<div class="logo">
+    <!-- <img src="{{url_for('static',filename='photos/logo.webp')}}" alt="" class="logo-show">   -->
+
+<h1 class="navbar-bran pt-5">STRAIGHT-TALK</h1>
+    
+</div>
+{% endblock%}
