@@ -37,19 +37,19 @@ body{
     font-family: 'Aladin', cursive;
 }
 .navbar,footer{
-    background-color: #ffffff !important;
+  background-color: #a57467 !important;
     
 }
 .navbar a:hover{
     font-weight: 900;
-    color: blue !important;
+
 }
 footer p{
     padding: 0px !important;
     margin: 0px !important;
 }
 .title{ 
-    color: rgb(88, 88, 240) !important;
+    color: #a57467!important;
 }
 .italic{
     font-family: 'Lato', sans-serif;
@@ -131,3 +131,6 @@ footer p{
       text-align: center;
       background-repeat: no-repeat;
   }
+.edit{
+  margin-left: 25%;
+}
