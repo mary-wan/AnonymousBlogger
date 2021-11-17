@@ -12,8 +12,12 @@ from .. import db,photos
 @main.route('/')
 def index():
     blogs = Blog.query.all()
+    general = Blog.query.filter_by(category = 'General').all()
+    politics = Blog.query.filter_by(category = 'Politics').all()
+    religion = Blog.query.filter_by(category = 'Religion').all()
+    relationships = Blog.query.filter_by(category = 'Relationships').all()
     
-    return render_template('index.html',blogs=blogs)
+    return render_template('index.html',blogs=blogs,general=general,politics=politics,religion=religion,relationships=relationships)
 
 @main.route('/create_new',methods=['POST','GET'])
 @login_required
@@ -40,6 +44,6 @@ def comment(blog_id):
         new_comment.save_comment()
         blog_id=blog_id
         return redirect(url_for('.comment',blog_id=blog_id))
-    return render_template('comment.html',form=form,comments=comments,blog=blog)
+    return render_template('comment.html',form=form,comments=comments)
         
     
